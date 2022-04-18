@@ -25,7 +25,7 @@ Your README should be in introduction to your web app. Provide in your README, y
 <hr>
 
 #### This is my ERD done in lab 11:
-![img](xxxxxxxxxxxxxxxx)
+![img](https://user-images.githubusercontent.com/70282602/163318346-b87cb30c-c569-4627-9dab-47c62d61546b.png)
 
 
 
