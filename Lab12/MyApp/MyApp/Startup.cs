@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyApp.Data;
+using MyApp.Models.Interfaces;
+using MyApp.Models.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +37,11 @@ namespace MyApp
                 string connectionString = Configuration.GetConnectionString("DefaultConnection");
                 options.UseSqlServer(connectionString);
             });
+
+
+            services.AddTransient<IHotel, HotelRepository>();
+            services.AddTransient<IRoom, RoomRepository>();
+            services.AddTransient<IAmenity, AmenityRepository>();
 
             services.AddControllers();
         }
